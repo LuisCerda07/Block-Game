@@ -1,2 +1,2 @@
-# Brick Game - Games
+# Block Game
  This is a recreation / port of games of the famous 9999 in 1 Brick Game
