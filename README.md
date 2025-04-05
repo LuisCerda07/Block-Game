@@ -9,7 +9,7 @@
 - Snake
 - Etc
 
-#### The games are code in Python with Pygame library,
+#### The games are code in Python with Pygame library.
 
 #### The proyect is open source and you can download and mod all of the games!
 
@@ -21,9 +21,11 @@
 
 #### Block Game es una recreación del famoso "Brick Game 9999 en 1". Este proyecto esta hecho para portear los juegos mas populares y los únicos 5 que la consola trae, como:
 
-##### * Race Cars 
-##### * Snake
-##### * Etc
+- Race Cars 
+- Snake
+- Etc
+
+#### Los juegos estan programado en Python con la libreria Pygame.
 
 #### ¡Este proyecto es de código abierto y puedes descargar y modificar todos los juegos!
 
