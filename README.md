@@ -10,8 +10,9 @@
 - Etc
 
 #### The games are code in __Python__ with __Pygame__ library.
-<img src="https://logos-world.net/wp-content/uploads/2021/10/Python-Logo.png" width="300" style="display:inline-block; margin-right:10px;" />
-<img src="https://www.pygame.org/docs/_images/pygame_lofi.png" width="300" style="display:inline-block; margin-left:10px;"/>
+
+<img src="https://logos-world.net/wp-content/uploads/2021/10/Python-Logo.png" width="200" style="float:left; margin-right:10px;" />
+<img src="https://www.pygame.org/docs/_images/pygame_lofi.png"  width="200" style="float:left; margin-left:10px;" />
 
 
 #### The proyect is open source and you can download and mod all of the games!
