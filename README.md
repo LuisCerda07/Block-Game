@@ -10,19 +10,8 @@
 - Etc
 
 #### The games are code in __Python__ with __Pygame__ library.
-
-<table style="border: none; width: 100%;">
-  <tr>
-    <td style="border: none; padding: 0; text-align: center;">
-      <img src="https://logos-world.net/wp-content/uploads/2021/10/Python-Logo.png" width="150" />
-    </td>
-    <td style="border: none; padding: 0; text-align: center;">
-      <img src="https://www.pygame.org/docs/_images/pygame_lofi.png" width="150" />
-    </td>
-  </tr>
-</table>
-
-
+| <img src="https://logos-world.net/wp-content/uploads/2021/10/Python-Logo.png" width="500" /> | <img src="https://www.pygame.org/docs/_images/pygame_logo.png" width="500" /> |
+|----------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
 
 
 #### The proyect is open source and you can download and mod all of the games!
@@ -40,6 +29,9 @@
 - Etc
 
 #### Los juegos estan programado en __Python__ con la libreria __Pygame__.
+| <img src="https://logos-world.net/wp-content/uploads/2021/10/Python-Logo.png" width="500" /> | <img src="https://www.pygame.org/docs/_images/pygame_logo.png" width="500" /> |
+|----------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
+
 
 #### ¡Este proyecto es de código abierto y puedes descargar y modificar todos los juegos!
 
