@@ -1,7 +1,7 @@
 # Block Game
 
 #### __EN:__
-## What is Block Game?
+### What is Block Game?
 
 #### Block Game is a recreation the famous "Brick Game 9999 in 1". This proyect is made to port the most popular and the only five games what the console have, like:
 
@@ -20,7 +20,7 @@
 
 #### __ES:__
 
-## ¿Qué es Block Game?
+### ¿Qué es Block Game?
 
 #### Block Game es una recreación del famoso "Brick Game 9999 en 1". Este proyecto esta hecho para portear los juegos mas populares y los únicos 5 que la consola trae, como:
 
