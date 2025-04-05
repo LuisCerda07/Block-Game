@@ -11,8 +11,8 @@
 
 #### The games are code in __Python__ with __Pygame__ library.
 
-| ![Imagen 1](https://logos-world.net/wp-content/uploads/2021/10/Python-Logo.png) | ![Imagen 2](https://www.pygame.org/docs/_images/pygame_lofi.png) |
-|---------------------------------------------------------------------------------|------------------------------------------------------------------|
+| <img src="https://logos-world.net/wp-content/uploads/2021/10/Python-Logo.png" width="150" /> | <img src="https://www.pygame.org/docs/_images/pygame_lofi.png" width="150" /> |
+|----------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
 
 
 #### The proyect is open source and you can download and mod all of the games!
