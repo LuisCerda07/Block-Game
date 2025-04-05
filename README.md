@@ -11,7 +11,7 @@
 
 #### The games are code in __Python__ with __Pygame__ library.
 
-| <img src="https://logos-world.net/wp-content/uploads/2021/10/Python-Logo.png" width="300" /> | <img src="https://www.pygame.org/docs/_images/pygame_lofi.png" width="300" /> |
+| <img src="https://logos-world.net/wp-content/uploads/2021/10/Python-Logo.png" width="500" /> | <img src="https://www.pygame.org/docs/_images/pygame_lofi.png" width="500" /> |
 |----------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
 
 
