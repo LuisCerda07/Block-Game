@@ -5,9 +5,9 @@
 
 #### Block Game is a recreation the famous "Brick Game 9999 in 1". This proyect is made to port the most popular and the only five games what the console have, like:
 
-##### * Race Cars 
-##### * Snake
-##### * Etc
+- Race Cars 
+- Snake
+- Etc
 
 #### The games are code in Python with Pygame library,
 
