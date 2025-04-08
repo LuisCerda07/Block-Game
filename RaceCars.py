@@ -47,10 +47,10 @@ running = True
 #eleted_autos = []
 #min_distancia = 120 
 #---------------#
-#counter_YU = 0
-#counter_YD = 0  #Borrar codigo basura (That dont work on the new movement!)
-#counter_XL = 0
-#counter_XR = 0
+counter_YU = 0
+counter_YD = 0  #Borrar codigo basura (That dont work on the new movement!)
+counter_XL = 0
+counter_XR = 0
 #---------------#
 #vel_autos = 1
 #points_player = 0 #IS IN THE NEW POINTS PLAYER CODE!
