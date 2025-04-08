@@ -41,28 +41,28 @@ running = True
 #----------------#
 
 #TRASH CODE
-color_enemigo = (255, 0, 0)
-size_autos = 100
-num_autos = []      #IS IN THE NEW CARS SPAWN CODE!
-deleted_autos = []
-min_distancia = 120 
+#color_enemigo = (255, 0, 0)
+#size_autos = 100
+#num_autos = []      #IS IN THE NEW CARS SPAWN CODE!
+#eleted_autos = []
+#min_distancia = 120 
 #---------------#
-counter_YU = 0
-counter_YD = 0  #Borrar codigo basura (That dont work on the new movement!)
-counter_XL = 0
-counter_XR = 0
+#counter_YU = 0
+#counter_YD = 0  #Borrar codigo basura (That dont work on the new movement!)
+#counter_XL = 0
+#counter_XR = 0
 #---------------#
-vel_autos = 1
-points_player = 0 #IS IN THE NEW POINTS PLAYER CODE!
-enemy = 0
+#vel_autos = 1
+#points_player = 0 #IS IN THE NEW POINTS PLAYER CODE!
+#enemy = 0
 #---------------
 
 #---Posicion del cuadrado (Provisional)---
 #pos_X = (Ancho - size_cuadrado) // 2
 #pos_Y = (Alto - size_cuadrado) // 2
 
-pos_X = 650 #This two things is on the new Cars Spawn code!
-pos_Y = -50
+#pos_X = 650 #This two things is on the new Cars Spawn code!
+#pos_Y = -50
 #-----------------------------------------
 
 ventana_program = pygame.display.set_mode((Ancho, Alto))
