@@ -28,6 +28,9 @@ options_in_game = pygame.Rect(0, 520, 200, 350)
 points_image = pygame.image.load("Assets/Textures/point-level.png")
 points_texture = pygame.transform.scale(points_image, (400, 150))
 points_in_game = pygame.Rect(0, 0, 400, 150)
+newLevel_image = pygame.image.load("Assets/Textures/new-level.png")
+newLevel_texture = pygame.transform.scale(newLevel_image, (350,100))
+newLevel_ingame = pygame.Rect(585,300, 100, 350)
 border_image = pygame.image.load("Assets/Textures/border.png")
 border_texture = pygame.transform.scale(border_image, (417, 720))
 border_in_game = pygame.Rect(550, 0, 417, 720)
@@ -37,7 +40,7 @@ level = 0
 paused = False
 show_texture = False
 running = True
-#flag = True
+flag = False
 #----------------#
 
 #TRASH CODE
@@ -79,9 +82,26 @@ def paused_game():
         ventana_program.blit(stopPaused_texture, options_in_game)
         paused = True
 
-def levels_enemy():
+def level_texture():
 
-    global level
+    global flag
+
+    if flag == True:
+
+        ventana_program.blit(newLevel_texture, newLevel_ingame)
+
+
+    if PointsPlayer.puntos_player in [550, 1550, 2550]:
+
+        flag = True
+
+    elif PointsPlayer.puntos_player in [650, 1700, 2750]:
+
+        flag = False
+
+def level_enemyPOS():
+
+    global level, flag
 
     Spawn_Cars.generate_autos(ventana_program, player, game_fps)
 
@@ -126,6 +146,7 @@ def levels_enemy():
         level += 1
         print(level)
         PointsPlayer.puntos_player += 50
+
     #elif PointsPlayer.puntos_player == 500 or PointsPlayer.puntos_player == 1500:
 
         #Spawn_Cars.vel_auto += 2
@@ -324,13 +345,14 @@ while running:
     #ventana_program.blit(paused_texture, paused)
     PointsPlayer.points_player(ventana_program)
     #Spawn_Cars.generate_autos(ventana_program, player, game_fps)
-    levels_enemy()
+    level_enemyPOS()
     ventana_program.blit(border_texture, border_in_game)
     ventana_program.blit(options_texture, options_in_game)
     #pygame.draw.rect(ventana_program, color_enemigo, (pos_X, pos_Y, size_autos, size_autos))
     #pygame.draw.rect(ventana_program, color_player, player)
     ventana_program.blit(player_texture, player)
     paused_game()
+    level_texture()
     #pygame.draw.rect(ventana_program, color_enemigo, auto_test)
     ventana_program.blit(text_fps,(20, 20))
     ventana_program.blit(text_level,(20,80))

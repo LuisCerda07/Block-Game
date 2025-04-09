@@ -2,7 +2,7 @@ import pygame
 import Spawn_Cars
 from Spawn_Cars import autos, Y_limit
 
-puntos_player = 0
+puntos_player = 300
 
 def points_player(pantalla):
 
