@@ -1,27 +1,18 @@
 import random
 import pygame
 
+
+clock = pygame.time.Clock()
 Y_limit = 720
 X1_limit = 580 #Original value: 650
 X2_limit = 790 #Original value: 880
-auto_enemyCol = (255, 0, 0)
-size_auto = 100
-x = 0
-y = 0
 stop_game = 0
 player_image = pygame.image.load("Assets/Textures/car.png")
-player_texture = pygame.transform.scale(player_image, (150, 200))
 auto_appearance = random.choice(["left", "right"])
-#points = 0
-#min_distance_X = 120 #PLS DELETE THIS SHIT XD
-#min_distance_Y = 520
-vel_auto = 3
+vel_auto = 5
 autos = []
 autos_delete = []
 
-#def player_lose():
-
-    #print("Perdiste pedazo de mierda")
 
 def generate_pos():
 
@@ -74,13 +65,11 @@ def generate_autos(pantalla, player, game_fps):
         if y > Y_limit:
 
             autos_delete.append(i)
-            #points += 50 AND DELETE THIS
 
         else:
             
             auto_enemy = pygame.Rect(x, y, 150, 200)
-            #pygame.draw.rect(pantalla, auto_enemyCol, auto_enemy)
-            pantalla.blit(player_texture, auto_enemy)
+            pantalla.blit(player_image, auto_enemy)
             autos[i][1] = y
 
             if auto_enemy.colliderect(player): #LOSE COLIDER, IF PLAYER TOUCH A ENEMY, LOSE THE GAME
@@ -94,8 +83,4 @@ def generate_autos(pantalla, player, game_fps):
         del autos[i]
 
     autos_delete.clear()
-
-    #font = pygame.font.SysFont('Segoe Script', 30)
-    #puntuacion = font.render(f'Puntuación: {points}', True, (0, 0, 0))
-    #pantalla.blit(puntuacion,(10,50))
     return

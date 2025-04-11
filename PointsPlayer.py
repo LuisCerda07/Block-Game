@@ -2,7 +2,7 @@ import pygame
 import Spawn_Cars
 from Spawn_Cars import autos, Y_limit
 
-puntos_player = 300
+puntos_player = 0
 
 def points_player(pantalla):
 
@@ -19,11 +19,6 @@ def points_player(pantalla):
             puntos_player += 50
             print("Give 50 points to player!")
 
-    #if puntos_player == 450:
-
-        #print("Level 2!")
-        #Spawn_Cars.vel_auto = 7
-
 
     if puntos_player > 999999:
 
@@ -33,7 +28,6 @@ def points_player(pantalla):
     font = pygame.font.Font('Assets/Font/slkscr.ttf', 30)
     inGame_points = font.render(f'Puntuacion: {puntos_player}', True, (2, 31, 11))
     pantalla.blit(inGame_points,(20, 50))
-
     return
 
     
