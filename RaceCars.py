@@ -1,6 +1,7 @@
 import pygame
 import random
 import sys
+import os
 import pygame.transform
 import Spawn_Cars
 import PointsPlayer
@@ -21,6 +22,10 @@ show_texture = False
 running = True
 flag = False
 max_flag = False
+flag_frame = False
+current_frame = 0
+frame_time = 350
+update = pygame.time.get_ticks()
 #----------------#
 
 #---Textures---#
@@ -38,11 +43,29 @@ newLevel_image = pygame.image.load("Assets/Textures/new-level.png")
 newLevel_ingame = pygame.Rect(585,300, 100, 350)
 border_image = pygame.image.load("Assets/Textures/border.png")
 border_in_game = pygame.Rect(550, 0, 417, 720)
+explosionC1 = pygame.image.load("Assets/Textures/explosion1.png")
+explosionC2 = pygame.image.load("Assets/Textures/explosion2.png")
+frame = [explosionC1, explosionC2]
 #--------------#
 
 mainWindow = pygame.display.set_mode((Ancho, Alto))
-pygame.display.set_caption("RacingGame PORT PC")
+pygame.display.set_caption("RaceCars PORT PC")
 pygame.display.set_icon(icon_image)
+
+def explosion():
+
+    global update, frame_time, current_frame, frame
+    if Spawn_Cars.stop_game == 10:
+    
+        now = pygame.time.get_ticks()
+        if now - update > frame_time:
+
+            current_frame = (current_frame + 1) % len(frame)
+            update = now
+
+
+            mainWindow.blit(frame[current_frame], player)
+    return
 
 
 def paused_game():
@@ -147,37 +170,50 @@ while running:
 
             running = False
 
+        if evento.type == pygame.KEYUP:
+
+            if evento.key == pygame.K_v:
+
+                game_fps = 26
+
+
+        if evento.type == pygame.KEYDOWN:
+
+            if evento.key == pygame.K_v:
+
+                game_fps = 100
+            
+
+        if evento.type == pygame.KEYDOWN:
+
+            if evento.key == pygame.K_p:
+
+                show_texture = not show_texture
+
+                if show_texture == False:
+
+                    paused = False
+                    print("Working!")
 
     if teclas_pressed[pygame.K_RIGHT]:
 
         if player.x + player.width < Ancho:
 
             player.x += 250
+            print(player.x)
 
     if teclas_pressed[pygame.K_LEFT]:
 
         if player.x > 0:
 
             player.x -= 250
+            print(player.x)
 
 
     if teclas_pressed[pygame.K_q]:
 
         pygame.quit()
 
-    if teclas_pressed[pygame.K_p]:
-
-        show_texture = True
-        print("Game Paused")
-
-    if teclas_pressed[pygame.K_o]:
-
-        show_texture = False
-        paused = False
-
-    #if teclas_pressed[pygame.K_v]:
-
-        #Spawn_Cars.vel_auto += 10
 
     if paused == True:
         continue
@@ -223,6 +259,7 @@ while running:
     mainWindow.blit(player_image, player)
     paused_game()
     level_texture()
+    explosion()
     mainWindow.blit(text_fps,(20, 20))
     mainWindow.blit(text_level,(20,80))
     pygame.display.flip()
