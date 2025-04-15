@@ -20,8 +20,8 @@ level = 0
 paused = False
 show_texture = False
 running = True
-flag = False
-max_flag = False
+lvl_flag = False
+maxlvl_flag = False
 flag_frame = False
 current_frame = 0
 frame_time = 350
@@ -55,7 +55,7 @@ pygame.display.set_icon(icon_image)
 def explosion():
 
     global update, frame_time, current_frame, frame
-    if Spawn_Cars.stop_game == 10:
+    if Spawn_Cars.stop_game == True:
     
         now = pygame.time.get_ticks()
         if now - update > frame_time:
@@ -64,7 +64,7 @@ def explosion():
             update = now
 
 
-            mainWindow.blit(frame[current_frame], player)
+        mainWindow.blit(frame[current_frame], player)
     return
 
 
@@ -81,17 +81,17 @@ def paused_game():
 
 def level_texture():
 
-    global flag, max_flag, font_bigger, level
+    global lvl_flag, maxlvl_flag, font_bigger, level
 
     text_newLvl = font_bigger.render(f'{int(level)}', True, (2, 31, 11))
     text_maxLvl = font.render(f'MAX', True, (2, 31, 11))
 
-    if flag == True:
+    if lvl_flag == True:
 
         mainWindow.blit(newLevel_image, newLevel_ingame)
         mainWindow.blit(text_newLvl, (855,320))
 
-    if max_flag == True:
+    if maxlvl_flag == True:
 
         mainWindow.blit(newLevel_image, newLevel_ingame)
         mainWindow.blit(text_newLvl, (855,305))
@@ -100,22 +100,22 @@ def level_texture():
 
     if PointsPlayer.puntos_player in [550, 1550, 2550, 3550, 4550, 5550, 6550, 7550, 8550, 9550]:
 
-        flag = True
+        lvl_flag = True
 
     elif PointsPlayer.puntos_player == 10550:
 
-        max_flag = True
+        maxlvl_flag = True
 
     elif PointsPlayer.puntos_player in [650, 1700, 2750, 3800, 4850, 5900, 6950, 8000, 8850, 9900, 10950]:
 
-        flag = False
-        max_flag = False
+        lvl_flag = False
+        maxlvl_flag = False
     return
 
 
 def level_enemyPOS():
 
-    global level, flag
+    global level
 
     Spawn_Cars.generate_autos(mainWindow, player, game_fps)
 
@@ -243,11 +243,10 @@ while running:
 
 
     #---Controlador de "PERDER"---
-    if Spawn_Cars.stop_game == 10:
+    #if Spawn_Cars.stop_game == True:
         
         #RELLENAR CON UN BOTON DE CONTINUAR PARA PODER JUGAR EL JUEGO DE NUEVO
-        print("You Lose!")
-        continue
+        #DEJAR ESTATICO AL JUGADOR Y QUE NO SE PUEDAN USAR LOS CONTROLES
     #-----------------------------
 
     mainWindow.fill(color_fondo)

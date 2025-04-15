@@ -6,7 +6,7 @@ clock = pygame.time.Clock()
 Y_limit = 720
 X1_limit = 580 #Original value: 650
 X2_limit = 790 #Original value: 880
-stop_game = 0
+stop_game = False
 player_image = pygame.image.load("Assets/Textures/car.png")
 auto_appearance = random.choice(["left", "right"])
 vel_auto = 5
@@ -60,7 +60,13 @@ def generate_autos(pantalla, player, game_fps):
 
         x, y , vel = autos[i]
 
-        y += vel
+        
+        if stop_game == False:
+            y += vel
+
+        elif stop_game == True:
+
+            y = y
 
         if y > Y_limit:
 
@@ -75,7 +81,7 @@ def generate_autos(pantalla, player, game_fps):
             if auto_enemy.colliderect(player): #LOSE COLIDER, IF PLAYER TOUCH A ENEMY, LOSE THE GAME
 
                 print("YOU LOSE!")
-                stop_game = 10
+                stop_game = True
 
 
     for i in reversed(autos_delete):
