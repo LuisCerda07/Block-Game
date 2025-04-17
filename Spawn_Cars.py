@@ -62,6 +62,7 @@ def generate_autos(pantalla, player, game_fps):
 
         
         if stop_game == False:
+            
             y += vel
 
         elif stop_game == True:

@@ -139,18 +139,19 @@ def level_enemyPOS():
         PointsPlayer.puntos_player += 50
 
 
-    elif ((PointsPlayer.puntos_player  > 600 and PointsPlayer.puntos_player != 650) or 
-          (PointsPlayer.puntos_player > 1700 and PointsPlayer.puntos_player != 1750) or 
-          (PointsPlayer.puntos_player > 2700 and PointsPlayer.puntos_player != 2750) or
-          (PointsPlayer.puntos_player > 3700 and PointsPlayer.puntos_player != 3750) or
-          (PointsPlayer.puntos_player > 4700 and PointsPlayer.puntos_player != 4750) or
-          (PointsPlayer.puntos_player > 5700 and PointsPlayer.puntos_player != 5750) or
-          (PointsPlayer.puntos_player > 6700 and PointsPlayer.puntos_player != 6750) or
-          (PointsPlayer.puntos_player > 7700 and PointsPlayer.puntos_player != 7750) or
-          (PointsPlayer.puntos_player > 8700 and PointsPlayer.puntos_player != 8750) or
-          (PointsPlayer.puntos_player > 9700 and PointsPlayer.puntos_player != 9750) or
-          (PointsPlayer.puntos_player > 10700 and PointsPlayer.puntos_player != 10750)):
+    #elif ((PointsPlayer.puntos_player  > 600 and PointsPlayer.puntos_player != 650) or 
+          #(PointsPlayer.puntos_player > 1700 and PointsPlayer.puntos_player != 1750) or 
+          #(PointsPlayer.puntos_player > 2700 and PointsPlayer.puntos_player != 2750) or
+          #(PointsPlayer.puntos_player > 3700 and PointsPlayer.puntos_player != 3750) or
+          #(PointsPlayer.puntos_player > 4700 and PointsPlayer.puntos_player != 4750) or
+          #(PointsPlayer.puntos_player > 5700 and PointsPlayer.puntos_player != 5750) or
+          #(PointsPlayer.puntos_player > 6700 and PointsPlayer.puntos_player != 6750) or
+          #(PointsPlayer.puntos_player > 7700 and PointsPlayer.puntos_player != 7750) or
+          #(PointsPlayer.puntos_player > 8700 and PointsPlayer.puntos_player != 8750) or
+          #(PointsPlayer.puntos_player > 9700 and PointsPlayer.puntos_player != 9750) or
+          #(PointsPlayer.puntos_player > 10700 and PointsPlayer.puntos_player != 10750)):
 
+    elif PointsPlayer.puntos_player > (650 or 1750 or 2750 or 3750 or 4750 or 5750 or 6750 or 7750 or 8750 or 9750 or 10750):
 
         Spawn_Cars.auto_appearance = random.choice(["left", "right"])
 
@@ -199,16 +200,30 @@ while running:
 
         if player.x + player.width < Ancho:
 
-            player.x += 250
-            print(player.x)
+            if Spawn_Cars.stop_game == False:
+                
+                player.x += 250
+                print(player.x)
+
+            else:
+
+                player.x = player.x
+                print("WORK!")
+
 
     if teclas_pressed[pygame.K_LEFT]:
 
         if player.x > 0:
 
-            player.x -= 250
-            print(player.x)
+            if Spawn_Cars.stop_game == False:
+                
+                player.x -= 250
+                print(player.x)
 
+            else:
+
+                player.x = player.x
+                print("WORK!")
 
     if teclas_pressed[pygame.K_q]:
 
